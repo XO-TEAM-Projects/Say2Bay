@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voice Chat Bot</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+  }
+  button {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  button.recording {
+    background: red;
+  }
+  #chatBox {
+    background: white;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 300px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    overflow-y: auto;
+  }
+  .userMsg {
+    background: #DCF8C6;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    clear: both;
+    float: right;
+  }
+  .botMsg {
+    background: #E5E5EA;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    clear: both;
+    float: left;
+  }
+</style>
+</head>
+<body>
+
+<h1>English Voice Chat Bot</h1>
+<button id="voiceBtn">🎤 Start Talking</button>
+
+<div id="chatBox"></div>
+
+<script>
+  const btn = document.getElementById('voiceBtn');
+  const chatBox = document.getElementById('chatBox');
+
+  let recognizing = false;
+  let recognition;
+
+  if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+
+    recognition.onstart = () => {
+      recognizing = true;
+      btn.textContent = '⏹ Stop Recording';
+      btn.classList.add('recording');
+    };
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      addMessage(transcript, 'userMsg');
+      replyToUser(transcript);
+    };
+
+    recognition.onerror = (event) => {
+      console.error('Error:', event.error);
+    };
+
+    recognition.onend = () => {
+      recognizing = false;
+      btn.textContent = '🎤 Start Talking';
+      btn.classList.remove('recording');
+    };
+  } else {
+    alert('Your browser does not support Web Speech API');
+  }
+
+  btn.addEventListener('click', () => {
+    if (!recognition) return;
+    if (recognizing) {
+      recognition.stop();
+    } else {
+      recognition.start();
+    }
+  });
+
+  function addMessage(text, className) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = className;
+    msgDiv.textContent = text;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  function replyToUser(text) {
+    const helloReplies = [
+      "Hello there! How are you today?",
+      "Hey! Nice to see you.",
+      "Hi! What's up?",
+      "Hello! How's your day going?"
+    ];
+    const howAreYouReplies = [
+      "I'm doing great, thanks for asking!",
+      "Feeling awesome today!",
+      "I'm fine, what about you?",
+      "All good here, how about you?"
+    ];
+
+    const defaultReplies = [
+      "Interesting! Tell me more.",
+      "Oh really? That's cool!",
+      "Hmm, I see what you mean.",
+      "That's amazing!",
+      "You said: " + text
+    ];
+
+    let reply;
+    const lower = text.toLowerCase();
+    if (lower.includes('hello')) {
+      reply = helloReplies[Math.floor(Math.random() * helloReplies.length)];
+    } else if (lower.includes('how are you')) {
+      reply = howAreYouReplies[Math.floor(Math.random() * howAreYouReplies.length)];
+    } else {
+      reply = defaultReplies[Math.floor(Math.random() * defaultReplies.length)];
+    }
+
+    addMessage(reply, 'botMsg');
+    speak(reply);
+  }
+
+  function speak(message) {
+    const utterance = new SpeechSynthesisUtterance(message);
+    utterance.lang = 'en-US';
+    const voices = speechSynthesis.getVoices();
+    const englishVoice = voices.find(v => v.lang === 'en-US');
+    if (englishVoice) utterance.voice = englishVoice;
+    speechSynthesis.speak(utterance);
+  }
+
+  // Load voices
+  speechSynthesis.onvoiceschanged = () => {
+    console.log('Available voices:', speechSynthesis.getVoices());
+  };
+</script>
+
+</body>
+</html>
