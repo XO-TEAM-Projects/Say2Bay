@@ -73,6 +73,8 @@ body {
   transition: 0.3s;
 }
 
+
+
 .left button:hover {
   background-color: #ddd;
 }
