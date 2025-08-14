@@ -1,6 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6d1fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3c2b50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+ 
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.top .text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.top .text p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #4e4165;
+}
+
+.top .image {
+  text-align: center;
+}
+
+.top .image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.top .image h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: -4rem;
+  text-shadow: 1px 1px 4px #00000070;
+}
+
+.top .image p {
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px #00000050;
+}
+
+/* Bottom Form */
+.bottom {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input1,
+.input2,
+.input3,
+.input4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 230px;
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  position: relative;
+}
+
+
+.input1 input {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/847/847969.png');
+}
+
+.input2 input {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/561/561127.png');
+}
+
+.input3 input,
+.input4 input {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3064/3064155.png');
+}
+
+input {
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+}
+
+/* Button */
+.click {
+  margin: 2rem 0;
+}
+
+.click button {
+  background-color: #4b3d4f;
+  color: white;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.click button:hover {
+  background-color: #322836;
+}
+
+/* Login link */
+h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #3a2d4b;
+}
+
+h3 a {
+  color: #4b0078;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h3 a:hover {
+  text-decoration: underline;
+}
+
+
+/* rresponsive */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+
+  .image {
+    max-width: 90%;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputs > div {
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+  }
+
+  .click button {
+    width: 80%;
+    font-size: 1rem;
+  }
 }
