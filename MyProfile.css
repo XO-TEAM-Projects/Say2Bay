@@ -1,6 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #eee8f6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Container */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Left */
+.left {
+  width: 40%;
+  background-color: #3c2b50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+.left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+.left h2 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.left p {
+  margin: 10px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.left button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0eaf8;
+  color: #800000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  background-color: #ddd;
+}
+
+/* Right */
+.right {
+  width: 60%;
+  background-color: #f0eaf8;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3c2464;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #3c2464;
+}
+
+input {
+  padding: 12px 15px 12px 45px;
+  border: 2px solid #b9a8d3;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+}
+
+
+#PhoneNumber {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/724/724664.png');
+}
+
+#Email {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/561/561127.png');
+}
+
+#Password {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/709/709612.png');
+}
+
+/* Payment Section */
+.payment {
+  margin-top: 20px;
+  position: relative;
+}
+
+.payment h3 {
+  color: #3c2464;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.payment::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #3c2464;
+  cursor: pointer;
+}
+
+
+.Methods {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Methods .one,
+.Methods .two {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.Methods .one::before,
+.Methods .two::before {
+  content: "\f09d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 18px;
+  color: #3c2464;
 }

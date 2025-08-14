@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Hashem,Sedara" />
-    <meta
-      name="description"
-      content="This is a website where people can buy food and drinks using only their voice. Users can say what they want, add it to their cart, and order without typing or clicking. It makes shopping easy and fast."
-    />
-    <meta name="keyword" content="Cash,Sound,text,Statement" />
-    <link rel="stylesheet" href="MyProfile.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
-    />
-    <link
-      rel="icon"
-      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8vsIybFdnamoBTd9hcV70BBCCoJV6PiRdgA&s"
-    />
-    <title>MyProfile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Hashem,Sedara" />
+  <meta name="description" content="Voice shopping app for food and drinks" />
+  <meta name="keywords" content="Cash,Sound,text,Statement" />
+
+  <title>MyProfile</title>
+
+
+  <link rel="stylesheet" href="MyProfile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8vsIybFdnamoBTd9hcV70BBCCoJV6PiRdgA&s" />
 </head>
 <body>
-    <div class="container">
-        <div class="head">
-            <h1><-</h1>
-            <h1>My Account</h1>
-            <h1>Favorites >> </h1>
-        </div>
-        <div class="left">
-            <div class="profile">
-                <img src="" alt="Profile Image" loading="lazy">
-                <h2>Hashem Shatat</h2>
-                <p>Edit Profile</p>
-                <button type="button">Logout</button>
-        </div>
-        <div class="right">
-            <form action="#">
-       <div class="input1">
-                 <label for="PhoneNumber">PhoneNumber :</label>
-                <input type="number"  required placeholder="EX=0771234567" id="PhoneNumber">
-       </div>
-       <div class="input2">
-        <label for="Email">Email :</label>
-        <input type="email" required placeholder="xito2005@gmail.com" id="Email">
-       </div>
-         <div class="input3">
-            <label for="Password">Password :</label>
-            <input type="password" required minlength="5" placeholder="EX=Xo201298_team" id="Password">
-         </div>
-            </form>
-            <div class="payment">
-                <h3>Payment Methods :</h3>
-                <div class="Methods">
-                    <div class="one"></div>
-                    <div class="two"></div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left">
+      
+      <img src="https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg" alt="Profile Image" loading="lazy">
+      <h2>Hashem Shatat</h2>
+      <p><i class="fas fa-pen"></i> Edit Profile</p>
+      <button type="button">Logout</button>
     </div>
-    <script src="MyProfile.js"></script>
+
+    <!-- Right Side -->
+    <div class="right">
+      <div class="head">
+    
+        <h1>My Account</h1>
+        <h1>&rarr;</h1>
+      </div>
+
+      <form>
+        <div class="input1">
+          <label for="PhoneNumber">Phone Number :</label>
+          <input type="number" required placeholder="0771234567" id="PhoneNumber">
+        </div>
+
+        <div class="input2">
+          <label for="Email">Email :</label>
+          <input type="email" required placeholder="example@gmail.com" id="Email">
+        </div>
+
+        <div class="input3">
+          <label for="Password">Password :</label>
+          <input type="password" required minlength="5" placeholder="••••••••" id="Password">
+        </div>
+      </form>
+
+      <div class="payment">
+        <h3>Payment Methods :</h3>
+        <div class="Methods">
+          <div class="one"></div>
+          <div class="two"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="MyProfile.js"></script>
 </body>
 </html>
