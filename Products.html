@@ -29,8 +29,8 @@
         <h1>Say<span>2</span>Buy</h1>
       <ul>
         <li><a href="HomePage.html">homePage</a></li>
-        <li><a href="myProfile.html">myProfile</a></li>
-        <li><a href="Favorites.html">Favorites</a></li>
+        <li><a href="MyFavorites.html">myProfile</a></li>
+        <li><a href="MyFavorites.html">Favorites</a></li>
         <li><a href="Products.html">Products</a></li>
       </ul>
      </div>
@@ -40,222 +40,222 @@
             <details>
                 <summary>Filter</summary>
                 <ul>
-                    <li>All</li>
-                    <li>Drinks</li>
-                    <li>Food</li>
+                    <li id="allDrinkFood">All</li>
+                    <li id="drink">Drinks</li>
+                    <li id="food">Food</li>
                 </ul>
             </details>
         </div>
         <div class="product-list">
-             <div class="product-item">
-                <img src="photo/Ffruit bowl.png" alt="Product Image" loading="lazy">
-                <h3>Fruit bowl</h3>
-                <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
-            </div>
-        
-            <div class="product-item">
-                <img src="photo/hotdog.png" alt="Product Image" loading="lazy">
-                <h3>Hotdog</h3>
-                <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
-            </div>
-             <div class="product-item">
-                <img src="photo/Pepperoni Pizza.png" alt="Product Image" loading="lazy">
-                <h3>Pepperoni Pizza</h3>
-                <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
-            </div>
-             <div class="product-item">
-                <img src="photo/lemonada.png" alt="Product Image" loading="lazy">
-                <h3>lemonada</h3>
-                <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
-            </div>
-             <div class="product-item">
-                <img src="photo/sandwich.png" alt="Product Image" loading="lazy">
-                <h3>Sandwich</h3>
-                <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
-            </div>
-             <div class="product-item">
+            <div class="product-item" id="fruit-bowl">
+    <img src="photo/Ffruit bowl.png" alt="Product Image" loading="lazy">
+    <h3>Fruit bowl</h3>
+    <h4>price : 3:10</h4>
+    <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
+</div>
+
+<div class="product-item" id="hotdog">
+    <img src="photo/hotdog.png" alt="Product Image" loading="lazy">
+    <h3>Hotdog</h3>
+    <h4>price : 3:10</h4>
+    <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
+</div>
+<div class="product-item" id="pepperoni-pizza">
+    <img src="photo/Pepperoni Pizza.png" alt="Product Image" loading="lazy">
+    <h3>Pepperoni Pizza</h3>
+    <h4>price : 3:10</h4>
+    <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
+</div>
+<div class="product-item" id="lemonada">
+    <img src="photo/lemonada.png" alt="Product Image" loading="lazy">
+    <h3>lemonada</h3>
+    <h4>price : 3:10</h4>
+    <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
+</div>
+<div class="product-item" id="sandwich">
+    <img src="photo/sandwich.png" alt="Product Image" loading="lazy">
+    <h3>Sandwich</h3>
+    <h4>price : 3:10</h4>
+    <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
+</div>
+             <div class="product-item" id="potato-fries">
                 <img src="photo/Potato Fries.png" alt="Product Image" loading="lazy">
                 <h3>Potato Fries</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="grilled-chicken">
                 <img src="photo/grilled chickenpng.png" alt="Product Image" loading="lazy">
                 <h3>grilled chicken</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+               <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="double-beef-burger">
                 <img src="photo/doublebeef.png" alt="Product Image" loading="lazy">
                 <h3>Double Beef Burger</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="croissant">
                 <img src="photo/croissant.png" alt="Product Image" loading="lazy">
                 <h3>croissant</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="cherry-cupcake">
                 <img src="photo/Cherry Cupcake.png" alt="Product Image" loading="lazy">
                 <h3>Cherry Cupcake</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
 
 
-             <div class="product-item">
+             <div class="product-item" id="matcha">
                 <img src="photo/matcha.png" alt="Product Image" loading="lazy">
                 <h3>matcha</h3>
-                <button type="button">Add to cart</button>
-                            <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-            <div class="product-item">
+            <div class="product-item" id="strawberry-smoothie">
                 <img src="photo/Strawberry smoothie.png" alt="Product Image" loading="lazy">
                 <h3>Strawberry smoothie</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="shawarma">
                 <img src="photo/shawarma.png" alt="Product Image" loading="lazy">
                 <h3>Shawarma</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="paprika-chips">
                 <img src="photo/paprika chips.png" alt="Product Image" loading="lazy">
                 <h3>paprika chips</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="pink-lemonade">
                 <img src="photo/pinkLemonada.png" alt="Product Image" loading="lazy">
                 <h3>Pink lemonade</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="cookies">
                 <img src="photo/cookies.png" alt="Product Image" loading="lazy">
                 <h3>Cookies</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="orange-juice">
                 <img src="photo/orange juice.png" alt="Product Image" loading="lazy">
                 <h3>orange juice</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="bolognese-spaghetti">
                 <img src="photo/Bolognese Spaghetti.png" alt="Product Image" loading="lazy">
                 <h3>Bolognese Spaghetti</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="sushi">
                 <img src="photo/Sushi.png" alt="Product Image" loading="lazy">
                 <h3>Sushi</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>  
-             <div class="product-item">
+             <div class="product-item" id="pasta-in-tomato-sauce">
                 <img src="photo/PastaInTomatoSauce .png" alt="Product Image" loading="lazy">
                 <h3>Pasta In Tomato Sauce </h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="rice-with-meat">
                 <img src="photo/ricewithmeat.png" alt="Product Image" loading="lazy">
                 <h3>rice with meat </h3>
-                <button type="button">Add to cart</button>
-                                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-            <div class="product-item">
+            <div class="product-item" id="iced-coffee-moca">
                 <img src="photo/icedmoca.png" alt="Product Image" loading="lazy">
                 <h3>Iced Coffee Moca</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+               <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="grilled-steak-and-potatoes">
                 <img src="photo/Grilled Steak and Potatoes.png" alt="Product Image" loading="lazy">
                 <h3>Grilled Steak and Potatoes</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="salad-bowl-vegetable">
                 <img src="photo/Salad bowl vegetable.png" alt="Product Image" loading="lazy">
                 <h3>Salad bowl vegetable </h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="salmon">
                 <img src="photo/Salmon.png" alt="Product Image" loading="lazy">
                 <h3>Salmon</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="rice-with-chicken">
                 <img src="photo/riceWch.png" alt="Product Image" loading="lazy">
                 <h3>rice with chicken</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-              <div class="product-item">
+              <div class="product-item" id="classic-burger">
                 <img src="photo/classicBurger.png" alt="Product Image" loading="lazy">
                 <h3>classic Burger</h3>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="fried-chicken-with-french-fries">
                 <img src="photo/fried chicken with french fries.png" alt="Product Image" loading="lazy">
                 <h3>fried chicken with french fries </h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+               <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="randon-drinks">
                 <img src="photo/randondrinks.png" alt="Product Image" loading="lazy">
                 <h3>Randon Drinks</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                 <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
-             <div class="product-item">
+             <div class="product-item" id="fried-chicken">
                 <img src="photo/fried chicken.png" alt="Product Image" loading="lazy">
                 <h3>fried chicken</h3>
                 <h4>price : 3:10</h4>
-                <button type="button">Add to cart</button>
-                <button type="button">Add to Favorites></button>
+                <button type="button" onclick="addToList(this)">Add to cart</button>
+    <button type="button" onclick="addToFavorites(this)">Add to Favorites</button>
             </div>
       </div>
      <script src="Products.js"></script>

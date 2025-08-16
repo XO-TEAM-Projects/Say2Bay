@@ -213,3 +213,5 @@ body {
     font-size: 1.1rem;
   }
 }
+.hide { display: none; }
+.show { display: block; } /* أو inline-block حسب نوع العنصر */

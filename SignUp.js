@@ -38,6 +38,12 @@ let usernameFromVoice = "";
 let emailFromVoice = "";
 let passwordFromVoice = "";
 
+// Function to validate email format
+function isValidEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email.trim());
+}
+
 // Speak function
 function speakText() {
   const utterance = new SpeechSynthesisUtterance(explanationText);
@@ -118,9 +124,15 @@ SignUpButton.addEventListener("click", async (e) => {
     return;
   }
 
-  const finalUserName = usernameFromVoice || UserName.value;
-  const finalEmail = emailFromVoice || Email.value;
+  const finalUserName = (usernameFromVoice || UserName.value).trim();
+  const finalEmail = (emailFromVoice || Email.value).trim();
   const finalPassword = passwordFromVoice || Password.value;
+
+  // Validate email format
+  if (!isValidEmail(finalEmail)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
   try {
     const dbRef = ref(database);
