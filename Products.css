@@ -16,7 +16,7 @@ body {
 
 /* Navigation */
 .nav {
-  background-color: #fdeca2;
+  background-color: #b1e5dc;
   padding: 1rem 2rem;
 }
 
@@ -62,12 +62,12 @@ body {
   font-weight: 900;
 }
 .nav h1 span {
-  color: #c40000; /* Red "2" in Say2Buy */
+  color: #991a29; /* Red "2" in Say2Buy */
 }
 
 
 .nav ul li a:hover {
-  color: #c40000;
+  color: #991a29;
 }
 
 /* Explore & Filter */
@@ -85,7 +85,7 @@ body {
 }
 
 .top details summary {
-  background-color: #b02b2b;
+  background-color: #991a29;
   color: white;
   padding: 10px 20px;
   border-radius: 12px;
@@ -189,14 +189,14 @@ body {
   border: none;
   border-radius: 8px;
   background-color: white;
-  color: #5f27cd;
+  color: #333;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .product-item button:hover {
-  background-color: #eaeaea;
+  background-color: #b1e5dc;
 }
 @media (max-width: 768px) {
   .nav ul {
