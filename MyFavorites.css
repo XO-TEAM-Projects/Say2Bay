@@ -218,3 +218,7 @@ body {
     font-size: 12px;
   }
 }
+.hide { display: none; }
+.show {
+  display: revert; /* يرجع للـdisplay الطبيعي حسب الـuser-agent وCSS الأصلية */
+}/* أو inline-block حسب نوع العنصر */
